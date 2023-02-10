@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   so_long.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:27:14 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/02 21:20:49 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:42:00 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ typedef struct t_game{
 
 void		check_path(char **map);
 void		count_elm(int count_p, int count_c, int count_e, t_game_mape *vars);
-void		ft_free_ptr(void **ptr);
+void		ft_free_ptr(char **ptr);
 int			check_len(char **map, t_game_mape *ptr);
 t_game_mape	position(char **map, char c);
 int			check_character(t_game_mape *ptr);
@@ -82,4 +82,13 @@ void		move_up_cont(t_game_mape *vars, int x, int y);
 void		move_down_count(t_game_mape *vars, int x, int y);
 void		move_right_count(t_game_mape *vars, int x, int y);
 void		move_left_count(t_game_mape *vars, int x, int y);
+void		invalid_position_player(char **map);
+void		invalid_position_exite(char **map);
+int			key_hook(int keycode, t_game_mape *vars);
+void		check_xpm(void *data);
+void		ft_wall_con(t_game_mape *game, int i, int j);
+void		ft_player_con(t_game_mape *game, int i, int j);
+void		ft_exit_con(t_game_mape *game, int i, int j);
+void		ft_coins_con(t_game_mape *game, int i, int j);
+
 #endif

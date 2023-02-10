@@ -3,33 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   map_move.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/21 00:15:55 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/02 03:13:39 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/10 20:11:17 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h" //9
+#include "../so_long.h"
 
 int	key_hook(int keycode, t_game_mape *vars)
 {
-	if (keycode == 126)
+	if (keycode == 13 || keycode == 126)
 	{
 		move_up(vars);
 		moves_terminal(vars->count_moves++);
 	}
-	else if (keycode == 125)
+	else if (keycode == 1 || keycode == 125)
 	{
 		move_down(vars);
 		moves_terminal(vars->count_moves++);
 	}
-	else if (keycode == 124)
+	else if (keycode == 2 || keycode == 124)
 	{
 		move_right(vars);
 		moves_terminal(vars->count_moves++);
 	}
-	else if (keycode == 123)
+	else if (keycode == 0 || keycode == 123)
 	{
 		move_left(vars);
 		moves_terminal(vars->count_moves++);
@@ -39,9 +39,4 @@ int	key_hook(int keycode, t_game_mape *vars)
 		exit(0);
 	}
 	return (0);
-}
-
-void	move(t_game_mape *game)
-{
-	mlx_hook(game->mlx_window, 2, 0, key_hook, game);
 }

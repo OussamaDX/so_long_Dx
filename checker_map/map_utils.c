@@ -3,22 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   map_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:27:08 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/02 03:09:00 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/09 17:37:55 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../so_long.h"
 
-void	ft_free_ptr(void **ptr)
+void	ft_free_ptr(char **ptr)
 {
-	if (*ptr)
+	int	i;
+
+	i = 0;
+	while (ptr[i])
 	{
-		free(*ptr);
-		*ptr = NULL;
+		free(ptr[i]);
+		i++;
 	}
+	free(ptr);
 }
 
 int	check_map_coins(t_game_mape *game)

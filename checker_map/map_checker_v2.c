@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_checker_v2.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/14 14:35:06 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/01 19:39:37 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/09 16:40:48 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,6 @@ void	check_path(char **map)
 	y = position(map, 'P').j_player_y;
 	x = position(map, 'P').i_player_x;
 	flood_fill(map, x, y);
+	invalid_position_exite(map);
+	invalid_position_player(map);
 }

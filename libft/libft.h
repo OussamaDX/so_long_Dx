@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/27 21:39:42 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/02 17:21:02 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/09 21:23:41 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,4 +34,5 @@ char	*ft_strjoin(char *holder, char *cursor);
 char	**ft_split(char const *str, char c);
 void	ft_bzero(void *s, size_t n);
 char	*get_next_line(int fd);
+char	*ft_itoa(int n);
 #endif

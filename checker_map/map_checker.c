@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   map_checker.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ooussaad <ooussaad@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: ooussaad <ooussaad@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:26:59 by ooussaad          #+#    #+#             */
-/*   Updated: 2023/02/01 22:46:33 by ooussaad         ###   ########.fr       */
+/*   Updated: 2023/02/10 16:03:58 by ooussaad         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	check_ber(char *file)
 		return (0);
 	if (ft_strncmp(ext, ".ber", 5))
 	{
-		write(2, ".ber error", 12);
+		write(2, ".ber error", 11);
 		exit (1);
 	}
 	return (1);
