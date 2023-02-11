@@ -6,3 +6,13 @@
 
 
 # checking map
+
+``` checke len of map ```
+``` checke hight of map ```
+``` checke element of map : C P E 0 1 ```
+``` checke if found double of P or E ```
+``` checke all walls == 1 ```
+``` checker  path of player and coins :: i use flood fill ```
+``` checke xpm  files```
+
+# segfault == 0 in project ;)
