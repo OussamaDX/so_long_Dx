@@ -13,6 +13,8 @@
 ``` checke if found double of P or E ```
 ``` checke all walls == 1 ```
 ``` checker  path of player and coins :: i use flood fill ```
-``` checke xpm  files```
+``` checke xpm  files```\
+``` checke if player can access to exit_door ```
+``` checke if player can access to coins ```
 
 # segfault == 0 in project ;)
